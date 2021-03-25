@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dbItem">
+
+	<select id="itemlist" resultType="ItemDTO">
+		select * from item order by itemid asc
+	</select>
+	
+	<select id="count" resultType="int">
+		select count(*) from item order by itemid asc
+	</select>
+	
+	<select id="detail" resultType="ItemDTO">
+		select * from item where itemid = #{itemid}
+	</select>
+	
+	<select id="maxid" resultType="int">
+		select max(itemid) from item
+	</select>
+	
+	<insert id="insert">
+		insert into item(itemid, itemname, price, description, pictureurl, updatedate)
+		 values(#{itemid}, #{itemname}, #{price}, #{description}, #{pictureurl}, now())
+	</insert>
+	
+	<delete id="delete">
+		delete from item where itemid = #{itemid}
+	</delete>
+	
+	<update id="update">
+		update item set itemname=#{itemname}, price=#{price}, description=#{description}, pictureurl=#{pictureurl},
+		updatedate=now() where itemid = #{itemid}
+	</update>
+</mapper>

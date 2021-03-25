@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dbMember">
+	<select id="login" resultType="int">
+		select count(*) from member where email=#{email} and pw=#{pw}
+	</select>
+
+	<insert id="getJoin">
+		insert into Member(email, nickname, pw, profile, regdate, logindate) values(#{email}, #{nickname},
+		#{pw}, #{profileName}, now(), #{logindate})
+	</insert>
+	
+	<select id="emailcheck" resultType="int">
+		select count(*) from member where email=#{email}
+	</select>
+	
+	<select id="nickcheck" resultType="int">
+		select count(*) from member where nickname=#{nickname}
+	</select>
+</mapper>
