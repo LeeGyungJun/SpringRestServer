@@ -4,8 +4,6 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.web.multipart.MultipartHttpServletRequest;
-
 import com.naver.test.dto.ItemDTO;
 
 

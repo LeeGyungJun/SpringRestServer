@@ -8,10 +8,10 @@
 </head>
 <body>
 	<form method="post" enctype="multipart/form-data" id="updateform">
-		아이템 아이디:<input type="text" id="itemid" name="itemid" value="1" readonly="readonly" /><br/>
-		아이템 이름<input type="text" id="itemname" name="itemname" value="사과" /><br/>
-		아이템 가격<input type="text" id="price" name="price" value="1500"/><br/>
-		설명<input type="text" id="description" name="description" value="비타민 C가 풍부"/><br/>
+		아이템 아이디:<input type="text" id="itemid" name="itemid" readonly="readonly" /><br/>
+		아이템 이름<input type="text" id="itemname" name="itemname" /><br/>
+		아이템 가격<input type="text" id="price" name="price" /><br/>
+		설명<input type="text" id="description" name="description" /><br/>
 		새로운 이미지<input type="file" id="pictureurlfile" name="pictureurlfile" accept="image/*"/><br />
 		<input type="hidden" id="pictureurl" name="pictureurl" />
 		<input type="button" value="수정" id="updatebtn" onclick="update()"/>

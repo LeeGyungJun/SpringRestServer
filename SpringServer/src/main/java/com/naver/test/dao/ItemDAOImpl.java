@@ -84,6 +84,7 @@ public class ItemDAOImpl implements ItemDAO {
 	public void updatedate(HttpServletRequest request) {
 		try {
 			String path = request.getSession().getServletContext().getRealPath("resources/updatetime.txt");
+			System.out.println(path);
 			FileWriter fw = new FileWriter(path);
 			BufferedWriter bw = new BufferedWriter(fw);
 			Date date = new Date();

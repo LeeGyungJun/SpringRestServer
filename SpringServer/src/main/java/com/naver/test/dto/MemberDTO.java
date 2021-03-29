@@ -2,8 +2,6 @@ package com.naver.test.dto;
 
 import java.util.Date;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Data;

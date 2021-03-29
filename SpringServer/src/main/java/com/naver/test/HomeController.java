@@ -33,6 +33,8 @@ public class HomeController {
 	public String insert(Locale locale, Model model) {
 		return "insert";
 	}
+	
+	//웹 테스트용 컨트롤
 	@RequestMapping(value = "/update/{itemid}", method = RequestMethod.GET)
 	public String update(Locale locale, Model model, @PathVariable String itemid) {
 		return "update";
