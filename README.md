@@ -1,7 +1,7 @@
 # SpringRestServer
 Spring REST API Server
 
-JSON 객체를 반환하는 REST API Server로 Spring MVC 패턴을 사용하였습니다.
+JSON 객체를 반환하는 REST API Server로 Spring MVC 패턴을 사용하였으며, orm으로는 mybatis를 썼고 mysql로 db연동 하였습니다.
 
 회원관련으로는 회원가입, 로그인, 이메일 중복체크, 닉네임 중복체크가 있으며, 암호화는 sha-256을 사용하였고 이미지 저장은 UUID를 사용하여 중복 방지를 하였습니다.
 
